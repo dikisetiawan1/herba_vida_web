@@ -280,6 +280,12 @@
     background:#f8faf8;
 }
 
+.product-modal-img{
+    max-height: 500px;
+    width: auto;
+    object-fit: contain;
+}
+
 .section-title{
     color:#4CAF50;
     font-weight:700;
@@ -332,6 +338,80 @@
     position:absolute;
     margin:15px;
     z-index:2;
+}
+
+/* Desktop */
+.product-modal-img{
+    max-height: 500px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Modal */
+.modal-content{
+    position:relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Tombol close */
+.modal-close-custom{
+    position:absolute;
+    top:10px;
+    right:10px;
+
+    width:40px;
+    height:40px;
+
+    border:none;
+    border-radius:50%;
+
+    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+    z-index:999;
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    .modal-dialog{
+        margin:10px;
+    }
+
+    .product-modal-img{
+        max-height:250px;
+        width:auto;
+    }
+
+    .modal-body{
+        padding:15px;
+    }
+
+    .modal-body h3{
+        font-size:1.2rem;
+        margin-top:15px;
+    }
+
+    .modal-body h4{
+        font-size:1.3rem;
+    }
+
+    .modal-body p{
+        font-size:.9rem;
+    }
+
+    .btn-beli{
+        width:100%;
+        padding:12px;
+    }
+
+    .modal-close-custom{
+        width:35px;
+        height:35px;
+        top:8px;
+        right:8px;
+    }
 }
 
 /* css section manfaat teh herbal */
@@ -784,4 +864,251 @@
     color:white;
 
     transform:translateY(-3px);
+}
+
+/* section testimoni */
+
+.testimonial-section{
+
+    background:#f8faf8;
+
+    overflow:hidden;
+    margin-bottom:80px;
+}
+
+.testimonial-slider{
+
+    overflow:hidden;
+
+    position:relative;
+}
+
+.testimonial-track{
+
+    display:flex;
+
+    gap:25px;
+
+    width:max-content;
+
+    animation:scrollLeft 30s linear infinite;
+}
+
+.testimonial-card{
+
+    width:350px;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:25px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+
+    flex-shrink:0;
+
+    transition:.3s;
+}
+
+.testimonial-card:hover{
+
+    transform:translateY(-10px);
+}
+
+.stars{
+
+    color:#FFC107;
+
+    font-size:20px;
+
+    margin-bottom:15px;
+}
+
+.testimonial-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    min-height:100px;
+}
+
+.user-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-top:20px;
+}
+
+.user-info img{
+
+    width:60px;
+    height:60px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid #4CAF50;
+}
+
+.user-info h6{
+
+    margin:0;
+
+    font-weight:700;
+}
+
+.user-info small{
+
+    color:#888;
+}
+
+@keyframes scrollLeft{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+
+}
+
+.testimonial-track:hover{
+
+    animation-play-state:paused;
+}
+
+@media(max-width:768px){
+
+    .testimonial-card{
+
+        width:280px;
+    }
+
+}
+
+.testimonial-slider::before,
+.testimonial-slider::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    width:120px;
+    height:100%;
+
+    z-index:2;
+}
+
+.testimonial-slider::before{
+
+    left:0;
+
+    background:
+    linear-gradient(
+        to right,
+        #f8faf8,
+        transparent
+    );
+}
+
+.testimonial-slider::after{
+
+    right:0;
+
+    background:
+    linear-gradient(
+        to left,
+        #f8faf8,
+        transparent
+    );
+}
+
+/* section faq */
+.faq-badge{
+
+    display:inline-block;
+
+    padding:8px 20px;
+
+    border-radius:50px;
+
+    background:#e8f5e9;
+
+    color:#2e7d32;
+
+    font-weight:600;
+
+    margin-bottom:15px;
+}
+
+.faq-title{
+
+    font-weight:700;
+
+    color:#1b4332;
+}
+
+.custom-faq .accordion-item{
+
+    border:none;
+
+    margin-bottom:15px;
+
+    border-radius:20px !important;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.05);
+}
+
+.custom-faq .accordion-button{
+
+    background:white;
+
+    font-weight:600;
+
+    padding:20px 25px;
+
+    color:#1b4332;
+}
+
+.custom-faq .accordion-button:not(.collapsed){
+
+    background:#4CAF50;
+
+    color:white;
+}
+
+.custom-faq .accordion-button:focus{
+
+    box-shadow:none;
+}
+
+.custom-faq .accordion-body{
+
+    background:white;
+
+    color:#666;
+
+    line-height:1.8;
+}
+
+.faq-contact h5{
+
+    margin-bottom:20px;
+
+    color:#1b4332;
 }
