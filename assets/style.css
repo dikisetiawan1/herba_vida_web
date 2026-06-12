@@ -1112,3 +1112,109 @@
 
     color:#1b4332;
 }
+
+
+/* floating buttons */
+.floating-contact{
+
+    position:fixed;
+
+    right:20px;
+    bottom:20px;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:12px;
+
+    z-index:9999;
+}
+
+.float-btn{
+
+    width:60px;
+    height:60px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:24px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.15);
+
+    transition:.3s;
+}
+
+/* Hover */
+
+.float-btn:hover{
+
+    transform:
+    translateY(-5px)
+    scale(1.05);
+
+    color:white;
+}
+
+/* WhatsApp */
+
+.whatsapp{
+
+    background:#25D366;
+}
+
+/* Shopee */
+
+.shopee{
+
+    background:#EE4D2D;
+}
+
+/* TikTok */
+
+.tiktok{
+
+    background:#000;
+}
+
+/* Animasi Ngelayang */
+
+.float-btn{
+
+    animation:
+    floating 3s ease-in-out infinite;
+}
+
+.shopee{
+
+    animation-delay:.5s;
+}
+
+.tiktok{
+
+    animation-delay:1s;
+}
+
+@keyframes floating{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
