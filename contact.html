@@ -162,28 +162,29 @@
 
                 <div class="contact-form">
 
-                    <form>
+                    <form action="https://formsubmit.co/herbavida1487@gmail.com method="POST" >
 
-                        <input type="text"
+                        <input type="hidden" name="_subject" value="New message! from website herbavida">
+                        <input type="hidden" name="_cc" value="dikisetia101@gmail.com">
+                        <input type="hidden" name="_autoresponse" value="Thankyou for your order!">
+                        <input type="hidden" name="_template" value="table">
+
+                        <input type="text" name="name"
                                class="form-control mb-3"
-                               placeholder="Nama">
+                               placeholder="Nama" required>
 
-                        <input type="email"
+                        <input type="email" name="email"
                                class="form-control mb-3"
-                               placeholder="Email">
+                               placeholder="Email" required>
 
-                        <input type="text"
-                               class="form-control mb-3"
-                               placeholder="Subjek">
-
-                        <textarea
+                        <textarea name="message"
                             class="form-control mb-3"
                             rows="5"
                             placeholder="Pesan">
                         </textarea>
 
                         <button
-                            class="btn btn-success w-100">
+                            type="submit" class="btn btn-success w-100">
 
                             Kirim Pesan
 
